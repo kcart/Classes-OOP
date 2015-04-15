@@ -16,7 +16,7 @@ class WatermelonOrder(object):
 
         return total
 
-class Cantaloupe (object):
+class Cantaloupe(object):
     species = "Cantaloupe"
     color = "tan"
     imported = False
@@ -31,12 +31,13 @@ class Cantaloupe (object):
 
         return total
 
-class Casaba (object):
+class Casaba(object):
     species = "Casaba"
     color = 'green'
     imported = True
     shape = "natural"
     seasons = ['Spring','Summer', 'Fall', 'Winter']
+    base_price = 6.0
 
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
@@ -45,12 +46,13 @@ class Casaba (object):
 
         return total
 
-class Sharlyn (object):
+class Sharlyn(object):
     species = "Sharlyn"
     color = "tan"
     imported = True
     shape = "natural"
     seasons = ["Summer"]
+    base_price = 7.50
 
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
@@ -59,12 +61,13 @@ class Sharlyn (object):
 
         return total
 
-class SantaClaus (object):
+class SantaClaus(object):
     species = "Santa Claus"
     color = "green"
     imported = True
     shape = "natural"
     seasons = ['Winter', "Spring"]
+    base_price = 7.50 
 
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
@@ -79,6 +82,7 @@ class Christmas(object):
     imported = False
     shape = "natural"
     seasons = ["Winter", "Spring"]
+    base_price = 5.00
 
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
@@ -93,6 +97,7 @@ class HornedMelon(object):
     imported = True
     shape = "natural"
     seasons = ["Summer"]
+    base_price = 5.00
 
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
@@ -107,6 +112,7 @@ class Xigua(object):
     imported = True
     shape = "square"
     seasons = ["Summer"]
+    base_price = 15.0
 
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
@@ -121,7 +127,7 @@ class Ogen(object):
     imported = False
     shape = "natural"
     seasons = ["Spring", "Summer"]
-
+    base_price = 6.00 
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
 
