@@ -11,10 +11,10 @@ class WatermelonOrder(object):
 
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
-
-        total = 0   # TODO, calculate the real amount!
-
-        return total
+        if qty >= 3:
+            return qty * self.base_price * .75 
+        else:
+            return qty * self.base_price
 
 class Cantaloupe(object):
     species = "Cantaloupe"
@@ -27,9 +27,12 @@ class Cantaloupe(object):
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
 
-        total = 0   # TODO, calculate the real amount!
+        if qty >=5:
+            return qty * self.base_price * .5
+        else:
+            return qty * self.base_price
 
-        return total
+        
 
 class Casaba(object):
     species = "Casaba"
@@ -37,14 +40,11 @@ class Casaba(object):
     imported = True
     shape = "natural"
     seasons = ['Spring','Summer', 'Fall', 'Winter']
-    base_price = 6.0
+    base_price = 9.0
 
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
-
-        total = 0   # TODO, calculate the real amount!
-
-        return total
+        return qty * self.base_price
 
 class Sharlyn(object):
     species = "Sharlyn"
@@ -57,9 +57,7 @@ class Sharlyn(object):
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
 
-        total = 0   # TODO, calculate the real amount!
-
-        return total
+        return qty * self.base_price
 
 class SantaClaus(object):
     species = "Santa Claus"
@@ -72,9 +70,7 @@ class SantaClaus(object):
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
 
-        total = 0   # TODO, calculate the real amount!
-
-        return total
+        return qty * self.base_price
 
 class Christmas(object):
     species = "Christmas"
@@ -87,9 +83,7 @@ class Christmas(object):
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
 
-        total = 0   # TODO, calculate the real amount!
-
-        return total
+        return qty * self.base_price
 
 class HornedMelon(object):
     species = "Horned Melon"
@@ -97,14 +91,11 @@ class HornedMelon(object):
     imported = True
     shape = "natural"
     seasons = ["Summer"]
-    base_price = 5.00
+    base_price = 7.50
 
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
-
-        total = 0   # TODO, calculate the real amount!
-
-        return total
+        return qty * self.base_price
 
 class Xigua(object):
     species = "Xigua"
@@ -116,10 +107,7 @@ class Xigua(object):
 
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
-
-        total = 0   # TODO, calculate the real amount!
-
-        return total
+        return qty * self.base_price
 
 class Ogen(object):
     species = "Ogen"
@@ -128,9 +116,8 @@ class Ogen(object):
     shape = "natural"
     seasons = ["Spring", "Summer"]
     base_price = 6.00 
+
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
 
-        total = 0   # TODO, calculate the real amount!
-
-        return total
+        return qty * self.base_price
