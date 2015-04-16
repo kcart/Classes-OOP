@@ -1,6 +1,14 @@
 """This file should have our melon-type classes in it."""
 class Melon(object):
-    
+    species = "melon"
+    color = ""
+    imported = None
+    shape = ""
+    seasons = []
+
+    def __init__(self):
+        print(self.get_base_price())
+
     def get_base_price(self):
         return 5.00
 
@@ -14,9 +22,9 @@ class WatermelonOrder(Melon):
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
         if qty >= 3:
-            return qty * Melon.get_base_price() * .75 
+            return qty * self.get_base_price() * .75 
         else:
-            return qty * Melon.get_base_price()
+            return qty * self.get_base_price()
 
 class Cantaloupe(Melon):
     species = "Cantaloupe"
@@ -29,10 +37,9 @@ class Cantaloupe(Melon):
         """Calculate price, given a number of melons ordered."""
 
         if qty >=5:
-            return qty * Melon.get_base_price() * .5
+            return qty * self.get_base_price() * .5
         else:
-            return qty * Melon.get_base_price()
-
+            return qty * self.get_base_price()
         
 
 class Casaba(Melon):
@@ -44,7 +51,7 @@ class Casaba(Melon):
 
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
-        return qty * ((Melon.get_base_price() + 1) * 1.5)
+        return qty * ((self.get_base_price() + 1) * 1.5)
 
 class Sharlyn(Melon):
     species = "Sharlyn"
@@ -56,7 +63,7 @@ class Sharlyn(Melon):
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
 
-        return qty * (Melon.get_base_price() * 1.5)
+        return qty * (self.get_base_price() * 1.5)
 
 class SantaClaus(Melon):
     species = "Santa Claus"
@@ -68,7 +75,7 @@ class SantaClaus(Melon):
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
 
-        return qty * (Melon.get_base_price() * 1.5)
+        return qty * (self.get_base_price() * 1.5)
 
 class Christmas(Melon):
     species = "Christmas"
@@ -80,7 +87,7 @@ class Christmas(Melon):
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
 
-        return qty * Melon.get_base_price()
+        return qty * self.get_base_price()
 
 class HornedMelon(Melon):
     species = "Horned Melon"
@@ -91,7 +98,7 @@ class HornedMelon(Melon):
 
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
-        return qty * (Melon.get_base_price() * 1.5)
+        return qty * (self.get_base_price() * 1.5)
 
 class Xigua(Melon):
     species = "Xigua"
@@ -102,7 +109,7 @@ class Xigua(Melon):
 
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
-        return qty * (Melon.get_base_price() * 2 * 1.5)
+        return qty * (self.get_base_price() * 2 * 1.5)
 
 class Ogen(Melon):
     species = "Ogen"
@@ -114,4 +121,4 @@ class Ogen(Melon):
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
 
-        return qty * (Melon.get_base_price() + 1)
+        return qty * (self.get_base_price() + 1)
